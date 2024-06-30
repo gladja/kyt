@@ -1,11 +1,50 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .footer-list {
   color: $dark-grey;
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    gap: 40px;
+    flex-direction: row;
+  }
 }
 
 .footer-text {
-  font-size: 22px;
-  font-weight: 500px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer__social-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  fill: aqua;
+  color: aqua;
+
+  transition: all $dur-primary;
+
+  &:hover {
+    background-color: $carbon-black;
+  }
 }
