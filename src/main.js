@@ -1,5 +1,5 @@
 import javascriptLogo from '../javascript.svg';
-import viteLogo from '../public/v.svg';
+import viteLogo from './public/v.svg';
 import { setupCounter } from './counter';
 
 document.querySelector('#app').innerHTML = `
