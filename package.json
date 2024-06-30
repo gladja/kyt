@@ -10,6 +10,12 @@
   },
   "devDependencies": {
     "vite": "^5.3.1",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "glob": "^8.1.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^2.0.0",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-html-inject": "^1.0.1"
   }
 }
