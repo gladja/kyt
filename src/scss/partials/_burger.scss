@@ -1,0 +1,66 @@
+//modal menu
+.js-menu-container {
+  position: absolute;
+  padding: 0 20px;
+  width: 100%;
+  border-radius: 14px;
+  top: 60px;
+  left: 0;
+  transform: translateX(-120%);
+  transition-duration: 1s;
+
+  z-index: 99;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.is__open {
+  transform: translateX(0%);
+}
+
+.modal__menu {
+  background: $yellow-push;
+  border-radius: 14px;
+  height: 100%;
+  padding: 20px;
+
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  .item {
+    padding: 5px 0;
+    transition: all $dur-primary;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      color: $dark-grey;
+    }
+  }
+}
+
+a.app__mob {
+  font-size: 22px;
+  font-weight: 600;
+  color: $carbon-black;
+  text-transform: uppercase;
+  letter-spacing: 1.9px;
+  border-bottom: solid 2px $carbon-black;
+
+  transition: all $dur-primary;
+
+  &:hover {
+    color: $dark-grey;
+    border-bottom: solid 2px $dark-grey;
+  }
+}
