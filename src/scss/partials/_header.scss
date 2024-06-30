@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  gap: 50px;
+
+  padding: 14px 24px;
+  border-radius: 14px;
+  background-color: #fffc8d;
+}
+
+.nav__img {
+  width: 110px;
+  height: 40px;
+}
+
+.nav__menu {
+  height: 37px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.item a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3030;
+
+  transition: all $dur-primary;
+
+  &:hover {
+    color: #868686;
+  }
+}
+
+/////////////
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 20px;
+}

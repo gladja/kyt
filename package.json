@@ -1,11 +1,11 @@
 {
-  "name": "kit",
+  "name": "kyt",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/kit/",
+    "build": "vite build --base=/kyt/",
     "preview": "vite preview"
   },
   "devDependencies": {
