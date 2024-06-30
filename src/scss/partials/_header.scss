@@ -1,10 +1,15 @@
 .header {
   display: flex;
-  gap: 50px;
+  align-items: center;
 
-  padding: 14px 24px;
+  padding: 14px 34px;
   border-radius: 14px;
-  background-color: #fffc8d;
+  background-color: $yellow-push;
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav__img {
@@ -13,7 +18,7 @@
 }
 
 .nav__menu {
-  height: 37px;
+  height: 40px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -29,18 +34,23 @@
   transition: all $dur-primary;
 
   &:hover {
-    color: #868686;
+    color: $dark-grey;
   }
 }
 
-/////////////
+.app {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3030;
+  text-transform: uppercase;
+  letter-spacing: 1.9px;
 
-.hero {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../../images/hero.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  border-bottom: solid 2px $carbon-black;
 
-  padding: 20px;
+  transition: all $dur-primary;
+
+  &:hover {
+    color: $dark-grey;
+    border-bottom: solid 2px $dark-grey;
+  }
 }
