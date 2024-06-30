@@ -50,6 +50,7 @@
   transition: all $dur-primary;
 
   &:hover {
+    background-color: $yellow-light;
     color: $dark-grey;
   }
 
