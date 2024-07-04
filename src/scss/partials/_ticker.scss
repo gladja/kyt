@@ -1,26 +1,33 @@
 .ticker__wrap {
   display: flex;
   overflow-x: hidden;
-  overflow: hidden;
 }
 
 .ticker__item {
-  font-size: 52px;
+  font-size: 32px;
   color: $yellow-push;
   line-height: 1.3;
-  padding: 24px 0;
+  padding: 10px 0;
   white-space: nowrap;
   display: inline-block;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 42px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 52px;
+  }
 }
 
 .item1 {
-  animation: marquee1 80s infinite linear;
-  animation-delay: -80s;
+  animation: marquee1 100s infinite linear;
+  animation-delay: -100s;
 }
 
 .item2 {
-  animation: marquee2 80s infinite linear;
-  animation-delay: -40s;
+  animation: marquee2 100s infinite linear;
+  animation-delay: -50s;
 }
 
 // div:after {
