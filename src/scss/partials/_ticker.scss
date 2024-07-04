@@ -1,0 +1,46 @@
+.ticker__wrap {
+  display: flex;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.ticker__item {
+  font-size: 52px;
+  color: $yellow-push;
+  line-height: 1.3;
+  padding: 24px 0;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.item1 {
+  animation: marquee1 80s infinite linear;
+  animation-delay: -80s;
+}
+
+.item2 {
+  animation: marquee2 80s infinite linear;
+  animation-delay: -40s;
+}
+
+// div:after {
+//   content: 'Привет! Я бегущая строка ';
+// }
+
+@keyframes marquee1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
