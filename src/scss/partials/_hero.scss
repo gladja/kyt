@@ -21,14 +21,15 @@
 }
 
 .hero__title {
-  font-size: 24px;
+  font-size: 22px;
   color: $yellow-push;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: 500;
   line-height: 1.1;
 
   @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
     font-size: 52px;
   }
 
@@ -41,7 +42,7 @@
 }
 
 .hero__btn {
-  font-size: 18px;
+  font-size: 14px;
   color: $carbon-black;
   padding: 12px 50px;
   background-color: $yellow-push;
@@ -92,7 +93,7 @@
 }
 
 .services-btn {
-  font-size: 16px;
+  font-size: 14px;
   color: $yellow-push;
   background-color: $carbon-black;
   border-radius: 42px;
