@@ -8,22 +8,23 @@
   }
 
   @media screen and (min-width: $desktop) {
-    font-size: 58px;
+    font-size: 38px;
+    margin-bottom: 20px;
   }
 }
 
 .about__text {
   font-size: 18px;
   text-align: center;
-  margin: 0 auto 80px;
+  // margin: 0 auto 40px;
 
   @media screen and (min-width: $tablet) {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   @media screen and (min-width: $desktop) {
     width: 800px;
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
@@ -40,9 +41,29 @@
   }
 }
 
+///
+.about-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+///
+///
+.bord {
+  // border: solid 1px $dark-grey;
+  border-radius: 14px;
+  padding: 30px;
+}
+
 .about__item {
-  width: 330px;
-  height: 450px;
+  // width: 330px;
+  // height: 450px;
   background-color: $bright-grey;
   border-radius: 14px;
   padding: 24px;
@@ -51,7 +72,7 @@
   justify-content: space-between;
 
   @media screen and (min-width: $tablet) {
-    height: 550px;
+    // height: 550px;
   }
 }
 
