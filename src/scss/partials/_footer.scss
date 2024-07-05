@@ -5,6 +5,8 @@
   align-items: center;
   gap: 20px;
 
+  padding-bottom: 40px;
+
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
