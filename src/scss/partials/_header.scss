@@ -5,6 +5,15 @@
   padding: 14px 34px;
   border-radius: 14px;
   background-color: $yellow-push;
+
+  position: fixed;
+  // top: 2%;
+  left: 50%;
+  // transform: ;
+  transform: translateX(-50%);
+  margin-top: 14px;
+  transition: top 0.3s;
+  width: 100%;
 }
 
 .logo {
@@ -61,21 +70,24 @@
   }
 }
 
-.app {
+.header__btn {
   display: none;
   font-size: 18px;
   font-weight: 600;
-  color: $carbon-black;
+  color: $white;
   text-transform: uppercase;
   letter-spacing: 1.9px;
 
-  border-bottom: solid 2px $carbon-black;
+  background-color: $dark-grey;
+  padding: 8px 20px;
+  border-radius: 14px;
+  // border-bottom: solid 2px $carbon-black;
 
   transition: all $dur-primary;
 
   &:hover {
     color: $dark-grey;
-    border-bottom: solid 2px $dark-grey;
+    background-color: $bright-grey;
   }
 
   @media screen and (min-width: $tablet) {
