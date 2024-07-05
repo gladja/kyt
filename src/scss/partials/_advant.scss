@@ -14,17 +14,24 @@
 }
 
 .advart__list {
-  font-size: 24px;
+  font-size: 22px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .advart__list-item {
   margin: 0 auto;
-  max-width: 900px;
-  padding: 10px 20px;
+  //   max- width: 800px;
+  padding: 20px;
+  width: 400px;
+  border-radius: 14px;
+  //   height: 100px;
+  background-color: $yellow-light;
 
-  &:nth-child(even) {
-    background-color: $bright-grey;
-  }
+  //   &:nth-child(even) {
+  //     background-color: $bright-grey;
+  //   }
 }
 
 // .advart__list-item:nth-child(even) {
