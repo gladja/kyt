@@ -18,7 +18,7 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
-    header.style.top = '-150px';
+    header.style.top = '-100px';
   } else {
     header.style.top = '0';
   }
