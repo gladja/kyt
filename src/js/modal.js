@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', event => {
   // Отримати всі кнопки, які відкривають модальне вікно
   const openModalButtons = document.querySelectorAll('.services-btn');
-
   // Отримати всі кнопки, які закривають модальне вікно
   const closeButtons = document.querySelectorAll('.close');
 
