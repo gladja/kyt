@@ -59,6 +59,7 @@
   padding: 1rem;
   text-align: left;
   background-color: #f7f7f7;
+  color: $carbon-black;
   border: none;
   cursor: pointer;
   outline: none;
@@ -76,6 +77,7 @@
   position: absolute;
   right: 1rem;
   transition: transform 0.3s ease;
+  color: $carbon-black;
 }
 
 .accordion-header.active::after {
