@@ -40,9 +40,9 @@
   opacity: 1;
 }
 
-.modal.show .modal-content {
-  //   transform: translateY(0);
-}
+// .modal.show .modal-content {
+//   //   transform: translateY(0);
+// }
 
 .close {
   color: #aaa;
@@ -63,7 +63,7 @@
 .modal-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 
   margin-bottom: 20px;
 }
