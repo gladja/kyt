@@ -1,9 +1,10 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', event => {
   // Отримати всі кнопки, які відкривають модальне вікно
   const openModalButtons = document.querySelectorAll('.services-btn');
   // Отримати всі кнопки, які закривають модальне вікно
   const closeButtons = document.querySelectorAll('.close');
+  // Отримати всі кнопки, які можуть відкривати інше модальне вікно
+  const contactManagerButtons = document.querySelectorAll('.modal__btn-support');
 
   // Додати подію "click" для відкриття модального вікна
   openModalButtons.forEach(button => {
@@ -29,6 +30,28 @@ document.addEventListener('DOMContentLoaded', event => {
       setTimeout(() => {
         modal.style.display = 'none';
       }, 300); // Затримка відповідає тривалості переходу
+    });
+  });
+
+  // Додати подію "click" для закриття поточного модального вікна і відкриття іншого
+  contactManagerButtons.forEach(button => {
+    button.addEventListener('click', event => {
+      const currentModal = event.target.closest('.modal');
+      const newModalId = button.getAttribute('data-modal');
+      const newModal = document.getElementById(newModalId);
+
+      // Закрити поточне модальне вікно
+      currentModal.classList.remove('show');
+      setTimeout(() => {
+        currentModal.style.display = 'none';
+      }, 300); // Затримка відповідає тривалості переходу
+
+      // Відкрити нове модальне вікно
+      newModal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Заблокувати прокрутку сторінки
+      setTimeout(() => {
+        newModal.style.display = 'block';
+      }, 10); // Невелика затримка для запуску переходу
     });
   });
 

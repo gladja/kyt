@@ -122,6 +122,7 @@
 .modal-content-wrap.modal-support {
   width: 300px;
   padding: 20px 26px 26px;
+  margin: 0 auto;
 
   @media screen and (min-width: $tablet) {
     padding: 40px 46px 56px;
@@ -131,6 +132,7 @@
 
 .modal-title-support {
   font-size: 18px;
+  margin-bottom: 10px;
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 20px;
@@ -139,7 +141,6 @@
 }
 
 .modal__form-item {
-  // height: 50px;
   width: 100%;
   margin-bottom: 20px;
   font-size: 16px;
@@ -180,11 +181,15 @@
 .modal__form-btn {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 20px;
+  }
 }
 
 .modal__form-submit {
-  font-size: 24px;
+  font-size: 18px;
   width: 300px;
   padding: 16px;
   border-radius: 60px;
@@ -196,13 +201,21 @@
   &:hover {
     background: $yellow-light;
   }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
 }
 
 .modal__social {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 20px;
+  }
 }
 
 .modal__social-img {
