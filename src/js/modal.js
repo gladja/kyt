@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', event => {
   // Додати подію "click" для закриття модального вікна
   closeButtons.forEach(button => {
     button.addEventListener('click', event => {
-      const modalId = event.target.getAttribute('data-modal');
+      const modalId = event.target.closest('.close').getAttribute('data-modal');
       const modal = document.getElementById(modalId);
       modal.classList.remove('show');
       document.body.style.overflow = ''; // Відновити прокрутку сторінки

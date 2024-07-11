@@ -52,18 +52,18 @@
 a.app__mob {
   font-size: 22px;
   font-weight: 600;
-  color: $white;
+  color: $yellow-push;
   text-transform: uppercase;
   letter-spacing: 1.9px;
 
-  background-color: $dark-grey;
+  background-color: $carbon-black;
   padding: 8px 20px;
   border-radius: 14px;
 
   transition: all $dur-primary;
 
   &:hover {
-    color: $dark-grey;
-    background-color: $bright-grey;
+    // color: $dark-grey;
+    background-color: $dark-grey;
   }
 }
