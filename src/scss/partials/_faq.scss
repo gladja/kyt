@@ -51,7 +51,7 @@
 }
 
 .accordion-item {
-  border-bottom: 1px solid #ddd;
+  // border-bottom: 1px solid #ddd;
 }
 
 .accordion-header {
@@ -66,6 +66,7 @@
   transition: background-color 0.3s ease;
   position: relative;
   margin-top: 5px;
+  border-radius: 14px;
 
   display: flex;
   flex-direction: row;
