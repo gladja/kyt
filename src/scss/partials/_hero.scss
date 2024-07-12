@@ -114,11 +114,13 @@
   }
 
   @media screen and (min-width: $tablet) {
+    padding: 10px 50px;
     font-size: 18px;
     width: 350px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
+    padding: 14px 50px;
     font-size: 22px;
     width: 400px;
   }
