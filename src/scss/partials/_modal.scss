@@ -111,8 +111,9 @@
 
 .modal__btn-social {
   display: flex;
-  gap: 10px;
   justify-content: center;
+  align-content: center;
+  gap: 10px;
   color: $carbon-black;
   text-align: center;
   font-size: 18px;
@@ -137,11 +138,6 @@
 .modal__icon-social {
   width: 41px;
   height: 32px;
-
-  @media screen and (min-width: $tablet) {
-    width: 40px;
-    height: 32px;
-  }
 }
 
 .modal__btn-support {
