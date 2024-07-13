@@ -48,23 +48,28 @@
 // }
 
 .close {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  fill: $carbon-black;
+
   // background: $carbon-black;
-  border-radius: 50%;
-  color: #aaa;
-  float: right;
-  font-size: 38px;
+
+  // border-radius: 50%;
+  // color: #aaa;
+  // float: right;
+  // font-size: 38px;
   // font-weight: bold;
 
   transition: all $dur-primary;
 
   &:hover,
   &:focus {
-    color: black;
-    text-decoration: none;
+    // color: black;
+    // text-decoration: none;
+    fill: $dark-grey;
     cursor: pointer;
   }
+
   @media screen and (min-width: $tablet) {
     width: 45px;
     height: 45px;
@@ -74,8 +79,7 @@
 .modal-header {
   display: flex;
   justify-content: space-between;
-  // align-items: baseline;
-
+  gap: 5px;
   margin-bottom: 5px;
 }
 
