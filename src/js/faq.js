@@ -1,7 +1,7 @@
-document.querySelectorAll('.accordion-header').forEach(header => {
+document.querySelectorAll('.accordion__header').forEach(header => {
   header.addEventListener('click', () => {
     const accordionContent = header.nextElementSibling;
-    const openItem = document.querySelector('.accordion-content.open');
+    const openItem = document.querySelector('.accordion__content.open');
 
     if (openItem && openItem !== accordionContent) {
       openItem.style.maxHeight = 0;

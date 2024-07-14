@@ -50,11 +50,7 @@
   }
 }
 
-.accordion-item {
-  // border-bottom: 1px solid #ddd;
-}
-
-.accordion-header {
+.accordion__header {
   width: 100%;
   padding: 1rem;
   text-align: left;
@@ -82,11 +78,11 @@
   display: none;
 }
 
-.accordion-header.active .icon-closed {
+.accordion__header.active .icon-closed {
   display: none;
 }
 
-.accordion-header.active .icon-open {
+.accordion__header.active .icon-open {
   display: block;
 }
 
@@ -103,7 +99,7 @@
 //   transform: rotate(180deg);
 // }
 
-.accordion-content {
+.accordion__content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
@@ -114,7 +110,7 @@
   }
 }
 
-.accordion-content p {
+.accordion__content p {
   margin: 1rem 0;
 }
 
