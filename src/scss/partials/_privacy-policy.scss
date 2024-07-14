@@ -1,0 +1,43 @@
+.privacy-policy {
+  padding-top: 110px;
+  color: #545454;
+}
+
+.privacy__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+}
+
+.privacy__title-sub {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+}
+
+.privacy__text {
+  line-height: 22px;
+  margin: 0 0 20px 0;
+
+  li {
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+.privacy__link {
+  color: $carbon-black;
+  font-weight: 600;
+}
+.privacy__dot {
+  list-style: disc;
+}
