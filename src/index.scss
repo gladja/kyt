@@ -6,8 +6,12 @@
 @import './scss/partials/header';
 @import './scss/partials/burger';
 @import './scss/partials/hero';
-@import './scss/partials/modal';
 @import './scss/partials/about';
 @import './scss/partials/footer';
 @import './scss/partials/ticker';
 @import './scss/partials/faq';
+
+@import './scss/partials/faq';
+
+// modals all menu, support, services
+@import './scss/partials/modal';

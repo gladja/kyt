@@ -57,7 +57,8 @@
 
   transition: all $dur-primary;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $dark-grey;
   }
 
@@ -81,12 +82,11 @@
   background-color: $carbon-black;
   padding: 8px 20px;
   border-radius: 14px;
-  // border-bottom: solid 2px $carbon-black;
 
   transition: all $dur-primary;
 
-  &:hover {
-    // color: $dark-grey;
+  &:hover,
+  &:focus {
     background-color: $dark-grey;
   }
 
@@ -95,7 +95,6 @@
   }
 }
 
-//burger
 .modal__btn {
   display: block;
   background: $white;
@@ -109,137 +108,12 @@
     display: none;
   }
 
+  // class for icon burger
   .hb {
     margin: 0 auto;
     display: block;
     width: 40px;
     background-color: $yellow-push;
     border: none;
-  }
-}
-
-//modal btn support
-.modal-content-wrap.modal-support {
-  width: 300px;
-  padding: 20px 26px 26px;
-  margin: 0 auto;
-
-  @media screen and (min-width: $tablet) {
-    padding: 40px 46px 56px;
-    width: 540px;
-  }
-}
-
-.modal-title-support {
-  font-size: 18px;
-  margin-bottom: 10px;
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 20px;
-    font-size: 32px;
-  }
-}
-
-.modal__form-item {
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 16px;
-  padding: 10px 30px;
-  border: 1px solid $grey;
-  border-radius: 50px;
-
-  @media screen and (min-width: $tablet) {
-    height: 50px;
-    font-size: 21px;
-  }
-
-  &:focus-visible {
-    outline: 1px solid $carbon-black;
-  }
-}
-
-.modal__form-textarea {
-  height: 100px;
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 16px;
-  padding: 24px 30px;
-  border: 1px solid $grey;
-  border-radius: 25px;
-
-  @media screen and (min-width: $tablet) {
-    border-radius: 50px;
-    font-size: 21px;
-    height: 150px;
-  }
-
-  &:focus-visible {
-    outline: 1px solid $carbon-black;
-  }
-}
-
-.modal__form-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  @media screen and (min-width: $tablet) {
-    gap: 20px;
-  }
-}
-
-.modal__form-submit {
-  font-size: 18px;
-  width: 300px;
-  padding: 16px;
-  border-radius: 60px;
-  color: $carbon-black;
-  background: $yellow-push;
-  border: none;
-
-  transition: all $dur-primary;
-
-  &:hover {
-    background: $yellow-light;
-  }
-
-  @media screen and (min-width: $tablet) {
-    font-size: 24px;
-  }
-}
-
-.modal__social {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-
-  @media screen and (min-width: $tablet) {
-    gap: 20px;
-  }
-}
-
-.modal__social-img {
-  width: 40px;
-  height: 40px;
-  fill: $carbon-black;
-
-  transition: all $dur-primary;
-
-  &:hover {
-    fill: $dark-grey;
-  }
-
-  @media screen and (min-width: $tablet) {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.close .cls-1 {
-  transition: all $dur-primary;
-
-  &:hover {
-    fill: $dark-grey;
   }
 }
