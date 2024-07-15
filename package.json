@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/kyt/",
-    "build2": "vite build",
+    "build": "vite build --config vite.config.js --base=/kyt/",
+    "build2": "vite build --config vite.config.with-dot.js",
     "preview": "vite preview"
   },
   "devDependencies": {
