@@ -79,4 +79,31 @@ document.addEventListener('DOMContentLoaded', event => {
       });
     }
   });
+
+  // Відправка event в dataLayer
+  window.addEventListener('click', event => {
+    if (event.target.classList.contains('form_send')) {
+      dataLayer.push({
+        'event': event.target.classList[0],
+        'service': event.target.classList[1],
+        'type': event.target.classList[2]
+      });
+    } else if (event.target.classList.contains('modal__btn-support') && event.target.classList[1]) {
+      const service = event.target.classList[1];
+      const type = event.target.classList[2];
+      const element = document.getElementById('support-form');
+      element.classList.remove('form_send', 'pidtrumka', 'form');
+      element.classList.add('form_send', service, type);
+    }
+  });
+
+  document.addEventListener('submit', event => {
+    if (event.target.classList.contains('form_send')) {
+      dataLayer.push({
+        'event': event.target.classList[0],
+        'service': event.target.classList[1],
+        'type': event.target.classList[2]
+      });
+    }
+  });
 });
