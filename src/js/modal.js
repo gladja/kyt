@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', event => {
 
   // Відправка event в dataLayer
   window.addEventListener('click', event => {
-    if (event.target.classList.contains('form_send')) {
+    if (event.target.classList.contains('modal__btn-social') || event.target.classList.contains('modal__social')) {
       dataLayer.push({
-        'event': event.target.classList[0],
+        'event': 'form_send',
         'service': event.target.classList[1],
         'type': event.target.classList[2]
       });
