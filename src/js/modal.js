@@ -82,28 +82,48 @@ document.addEventListener('DOMContentLoaded', event => {
 
   // Відправка event в dataLayer
   window.addEventListener('click', event => {
-    if (event.target.classList.contains('modal__btn-social') || event.target.classList.contains('modal__social')) {
-      dataLayer.push({
-        'event': 'form_send',
-        'service': event.target.classList[1],
-        'type': event.target.classList[2]
-      });
-    } else if (event.target.classList.contains('modal__btn-support') && event.target.classList[1]) {
-      const service = event.target.classList[1];
-      const type = event.target.classList[2];
-      const element = document.getElementById('support-form');
-      element.classList.remove('form_send', 'pidtrumka', 'form');
-      element.classList.add('form_send', service, type);
+    const { classList } = event.target;
+    const parentElement = event.target.closest('a');
+
+    if (classList) {
+      if (classList.contains('modal__btn-support') || classList.contains('app__mob services-btn')) {
+        const service = (classList.contains('modal__btn-support')) ?
+          event.target.getAttribute('data-service') : 'pidtrumka';
+
+        const form = document.getElementById('support-form');
+        const telegram = document.getElementById('social-telegram');
+        const instagram = document.getElementById('social-instagram');
+
+        form.setAttribute('data-service', service);
+
+        telegram.setAttribute('data-service', service);
+
+        instagram.setAttribute('data-service', service);
+      }
+    }
+
+    if (parentElement) {
+      if (parentElement.getAttribute('data-event')) {
+        dataLayer.push({
+          'event': parentElement.getAttribute('data-event'),
+          'service': parentElement.getAttribute('data-service'),
+          'type': parentElement.getAttribute('data-type')
+        });
+      }
     }
   });
 
   document.addEventListener('submit', event => {
-    if (event.target.classList.contains('form_send')) {
-      dataLayer.push({
-        'event': event.target.classList[0],
-        'service': event.target.classList[1],
-        'type': event.target.classList[2]
-      });
+    const element = event.target;
+
+    if (element) {
+      if (element.getAttribute('data-event')) {
+        dataLayer.push({
+          'event': element.getAttribute('data-event'),
+          'service': element.getAttribute('data-service'),
+          'type': element.getAttribute('data-type')
+        });
+      }
     }
   });
 });
