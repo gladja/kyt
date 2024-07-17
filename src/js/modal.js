@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', event => {
       const modalId = event.target.getAttribute('data-modal');
       const modal = document.getElementById(modalId);
       modal.classList.add('show');
-      document.body.style.overflow = 'hidden'; // Заблокувати прокрутку сторінки
+      // document.body.style.overflow = 'hidden'; // Заблокувати прокрутку сторінки
       setTimeout(() => {
         modal.style.display = 'block';
       }, 10); // Невелика затримка для запуску переходу
@@ -80,50 +80,51 @@ document.addEventListener('DOMContentLoaded', event => {
     }
   });
 
-    // Відправка event в dataLayer
-    window.addEventListener('click', event => {
-      const { classList } = event.target;
-      const parentElement = event.target.closest('a');
-  
-      if (classList) {
-        if (classList.contains('modal__btn-support') || classList.contains('app__mob services-btn')) {
-          const service = (classList.contains('modal__btn-support')) ?
-            event.target.getAttribute('data-service') : 'pidtrumka';
-  
-          const form = document.getElementById('support-form');
-          const telegram = document.getElementById('social-telegram');
-          const instagram = document.getElementById('social-instagram');
-  
-          form.setAttribute('data-service', service);
-  
-          telegram.setAttribute('data-service', service);
-  
-          instagram.setAttribute('data-service', service);
-        }
+  // Відправка event в dataLayer
+  window.addEventListener('click', event => {
+    const { classList } = event.target;
+    const parentElement = event.target.closest('a');
+
+    if (classList) {
+      if (classList.contains('modal__btn-support') || classList.contains('app__mob services-btn')) {
+        const service = classList.contains('modal__btn-support')
+          ? event.target.getAttribute('data-service')
+          : 'pidtrumka';
+
+        const form = document.getElementById('support-form');
+        const telegram = document.getElementById('social-telegram');
+        const instagram = document.getElementById('social-instagram');
+
+        form.setAttribute('data-service', service);
+
+        telegram.setAttribute('data-service', service);
+
+        instagram.setAttribute('data-service', service);
       }
-  
-      if (parentElement) {
-        if (parentElement.getAttribute('data-event')) {
-          dataLayer.push({
-            'event': parentElement.getAttribute('data-event'),
-            'service': parentElement.getAttribute('data-service'),
-            'type': parentElement.getAttribute('data-type')
-          });
-        }
+    }
+
+    if (parentElement) {
+      if (parentElement.getAttribute('data-event')) {
+        dataLayer.push({
+          event: parentElement.getAttribute('data-event'),
+          service: parentElement.getAttribute('data-service'),
+          type: parentElement.getAttribute('data-type'),
+        });
       }
-    });
-  
-    document.addEventListener('submit', event => {
-      const element = event.target;
-  
-      if (element) {
-        if (element.getAttribute('data-event')) {
-          dataLayer.push({
-            'event': element.getAttribute('data-event'),
-            'service': element.getAttribute('data-service'),
-            'type': element.getAttribute('data-type')
-          });
-        }
+    }
+  });
+
+  document.addEventListener('submit', event => {
+    const element = event.target;
+
+    if (element) {
+      if (element.getAttribute('data-event')) {
+        dataLayer.push({
+          event: element.getAttribute('data-event'),
+          service: element.getAttribute('data-service'),
+          type: element.getAttribute('data-type'),
+        });
       }
-    });
+    }
+  });
 });
