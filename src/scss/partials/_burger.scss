@@ -53,7 +53,7 @@ a.app__mob {
   font-size: 22px;
   font-weight: 600;
   color: $yellow-push;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: 1.9px;
 
   background-color: $carbon-black;
@@ -63,7 +63,7 @@ a.app__mob {
   transition: all $dur-primary;
 
   &:hover {
-    // color: $dark-grey;
+    color: $yellow-push;
     background-color: $dark-grey;
   }
 }
