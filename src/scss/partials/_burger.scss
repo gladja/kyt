@@ -32,12 +32,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 
   .item {
     padding: 5px 0;
     transition: all $dur-primary;
-    text-transform: uppercase;
 
     &:last-child {
       margin-top: 20px;
@@ -51,10 +50,11 @@
 
 a.app__mob {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   color: $yellow-push;
-  // text-transform: uppercase;
   letter-spacing: 1.9px;
+  display: flex;
+  align-items: center;
 
   background-color: $carbon-black;
   padding: 8px 20px;

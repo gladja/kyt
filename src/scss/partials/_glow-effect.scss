@@ -1,0 +1,11 @@
+.services__btn {
+    transition: box-shadow $dur-primary ease;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 25px rgb(253, 241, 1);
+  }
+  
+  .services-btn:hover {
+    box-shadow: none;
+  }
