@@ -137,3 +137,20 @@
     width: 360px;
   }
 }
+
+.hero__mouse {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 50px;
+
+    margin-right: auto;
+    img {
+      height: 115px;
+      width: 42px;
+    }
+  }
+}
