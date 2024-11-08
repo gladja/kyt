@@ -149,8 +149,10 @@
     justify-content: flex-end;
     position: relative;
     bottom: 70px;
-
     margin-right: auto;
+    
+    animation: bounce 2s infinite ease-in-out; //animation
+
     img {
       height: 115px;
       width: 42px;
@@ -159,5 +161,15 @@
 
   @media screen and (min-width: $desktop) {
     bottom: 50px;
+  }
+}
+
+//animation
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
