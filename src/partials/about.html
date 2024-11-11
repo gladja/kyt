@@ -17,10 +17,33 @@
         надійним фінансовим партнером!
       </p>
     </div>
-      <video class="about__video" id="myVideo" autoplay muted loop height="540px" width="890px" poster="images/poster.jpg">
-        <source src="video/kit.mp4" type="video/mp4" />
+
+    <div class="video-container">
+      <video
+        class="about__video"
+        id="myVideo"
+        autoplay
+        muted
+        loop
+        height="540px"
+        width="890px"
+        poster="images/poster.jpg"
+      >
+        <source src="https://dp.kitgroup.ua/video/kit.mp4" type="video/mp4" />
       </video>
+
+      <!--  Video button -->
+      <div class="controls">
+        <button id="togglePlay" class="control-btn">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button id="toggleSound" class="control-btn">
+          <i class="fas fa-volume-mute"></i>
+        </button>
+      </div>
+    </div>
   </div>
+
   <ul class="about__list">
     <li class="about__list-item">Наші переваги</li>
     <li class="about__list-item">
