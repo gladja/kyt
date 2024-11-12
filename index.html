@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -22,8 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyt</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script type="module" crossorigin src="/kyt/assets/main-Brme7GtG.js"></script>
-    <link rel="stylesheet" crossorigin href="/kyt/assets/main-DLbGR1av.css">
+    <script type="module" crossorigin src="/kyt/assets/main-OZkAcmNv.js"></script>
+    <link rel="stylesheet" crossorigin href="/kyt/assets/main-DUE3O6dl.css">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -248,6 +248,87 @@
     </li>
     <li class="about__list-item"></li>
   </ul>
+</section>
+
+      <section class="container" id="#">
+  <div class="map__wrap">
+    <div class="map__map">
+      <iframe
+        class="map__map"
+        id="mapFrame"
+        src=""
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="map__text">
+      <div class="map__text-title">Локації Дніпровщини</div>
+      <ul>
+        <li class="map__text-name" id="city">місто:</li>
+        <li class="map__text-name" id="metro1">метро:</li>
+        <!-- <li class="map__text-name" id="metro2">метро:</li> -->
+        <li id="address">адреса:</li>
+        <li id="phone">телефон:</li>
+        <li id="schedule">графік:</li>
+      </ul>
+      <button class="map__btn" onclick="switchLocation()">наступна локація</button>
+    </div>
+  </div>
+  <script>
+    let currentLocation = 0;
+
+    const locations = [
+      {
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20210.62582202272!2d35.02488862688333!3d48.4602020261964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f0af66d76f%3A0x4aedbedd3e886ea!2z0L_RgC3Rgi4g0JTQvNC40YLRgNC40Y8g0K_QstC-0YDQvdC40YbQutC-0LPQviwgODgsINCU0L3QtdC_0YAsINCU0L3QtdC_0YDQvtC_0LXRgtGA0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0OTAwMA!5e0!3m2!1sru!2sua!4v1731432061964!5m2!1sru!2sua&hl=uk",
+        // text: 'Адрес 1: Пример текста для первого местоположения.',
+        city: 'Днепр',
+        metro1: 'Метро 1',
+        // metro2: 'Метро 2',
+        address: 'Улица Пушкина, 1',
+        phone: '+380 (123) 456-789',
+        schedule: '9:00 - 18:00',
+      },
+      {
+        src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9312.83257617506!2d35.02099724953825!3d48.46960011600252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f751b91a69%3A0xdbe28e0ae55cb738!2sPryvatnyy%20Notarius%20Sobko%20N.v.!5e0!3m2!1sru!2sua!4v1731432195684!5m2!1sru!2sua',
+        // text: 'Адрес 2: Пример текста для второго местоположения.',
+        city: 'Киев',
+        metro1: 'Метро 3',
+        // metro2: 'Метро 4',
+        address: 'Улица Лермонтова, 2',
+        phone: '+380 (987) 654-321',
+        schedule: '10:00 - 19:00',
+      },
+      {
+        src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9360.097879645838!2d33.344924118902156!3d47.90404717664925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dadf35bf7aae75%3A0x25ec8613d62837c2!2z0J7QsdC80ZbQvSDQstCw0LvRjtGCINCa0JjQoiBHcm91cA!5e0!3m2!1sru!2sua!4v1731432494426!5m2!1sru!2sua',
+        // text: 'Адрес 3: Пример текста для третьего местоположения.',
+        city: 'Харьков',
+        metro1: 'Метро 5',
+        // metro2: 'Метро 6',
+        address: 'Улица Гоголя, 3',
+        phone: '+380 (456) 789-012',
+        schedule: '8:00 - 17:00',
+      },
+    ];
+
+    function switchLocation() {
+      const location = locations[currentLocation];
+      document.getElementById('mapFrame').src = location.src;
+    //   document.getElementById('locationText').innerText = location.text;
+      document.getElementById('city').innerHTML = `місто: <span class='map__text-item'>${location.city}</span>`;
+      document.getElementById('metro1').innerText = `метро: ${location.metro1}`;
+    //   document.getElementById('metro2').innerText = `метро: ${location.metro2}`;
+      document.getElementById('address').innerText = `адреса: ${location.address}`;
+      document.getElementById('phone').innerText = `телефон: ${location.phone}`;
+      document.getElementById('schedule').innerText = `графік: ${location.schedule}`;
+
+      currentLocation = (currentLocation + 1) % locations.length;
+    }
+
+    switchLocation();
+  </script>
 </section>
 
       <section class="container" id="faq">
