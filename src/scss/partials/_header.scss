@@ -2,20 +2,26 @@
   display: flex;
   align-items: center;
 
-  padding: 14px 34px;
+  padding: 14px 20px;
   border-radius: 20px;
   background-color: $yellow-push;
 
   position: fixed;
-  // top: 2%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-54%);
   margin-top: 14px;
+  margin: 14px 14px 0;
   transition: top 0.3s;
-  width: 98%;
+  width: 95%;
+  // width: 345px;
   z-index: 9999;
 
+  @media screen and (min-width: $tablet) {
+    transform: translateX(-51%);
+  }
+
   @media screen and (min-width: $desktop) {
+    transform: translateX(-50%);
     border-radius: 25px;
     padding: 18px 34px;
   }
@@ -98,7 +104,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 8px 50px;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
   }
