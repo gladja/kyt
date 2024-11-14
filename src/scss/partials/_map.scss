@@ -116,7 +116,9 @@
 
   transition: all $dur-primary;
 
-  &:hover {
+  &:hover,
+  &:focus
+   {
     background-color: $dark-grey;
   }
 
