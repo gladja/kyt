@@ -22,3 +22,25 @@ buttons.forEach((button) => {
 });
 
 startGlowEffect();
+
+
+// effect button next location
+const mapButton = document.querySelector('.map__btn');
+let mapInterval;
+
+function startGlowEffectMap() {
+  mapButton.classList.add('glow-effect');
+  mapInterval = setInterval(() => {
+    mapButton.classList.toggle('glow-effect');
+  }, 1500);
+}
+
+function stopGlowEffectMap() {
+  clearInterval(mapInterval);
+  mapButton.classList.remove('glow-effect');
+}
+
+mapButton.addEventListener('mouseenter', stopGlowEffectMap);
+mapButton.addEventListener('mouseleave', startGlowEffectMap);
+
+startGlowEffectMap();
