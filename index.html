@@ -22,8 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyt</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script type="module" crossorigin src="/kyt/assets/main-zevVI2kd.js"></script>
-    <link rel="stylesheet" crossorigin href="/kyt/assets/main-1UDQana7.css">
+    <script type="module" crossorigin src="/kyt/assets/main-BzpBuF6-.js"></script>
+    <link rel="stylesheet" crossorigin href="/kyt/assets/main-DI-5JShK.css">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -44,10 +44,10 @@
     </a>
     <nav class="nav">
       <ul class="nav__menu">
-        <li class="item"><a href="/">Послуги</a></li>
-        <li class="item"><a href="/#about">Компанія</a></li>
-        <li class="item"><a href="/#footer">Відділення</a></li>
-        <li class="item"><a href="#faq">Питання</a></li>
+        <li class="item"><a href="./">Послуги</a></li>
+        <li class="item"><a href="./#about">Компанія</a></li>
+        <li class="item"><a href="./#map">Відділення</a></li>
+        <li class="item"><a href="./#faq">Питання</a></li>
       </ul>
     </nav>
     <a
@@ -99,10 +99,10 @@
     </button>
     <div class="js-menu-container">
   <ul class="modal__menu">
-    <li class="item"><a href="/">Послуги</a></li>
-    <li class="item"><a href="/#about">Компанія</a></li>
-    <li class="item"><a href="/#footer">Відділення</a></li>
-    <li class="item"><a href="#faq">Питання</a></li>
+    <li class="item"><a href="./">Послуги</a></li>
+    <li class="item"><a href="./#about">Компанія</a></li>
+    <li class="item"><a href="./#map">Відділення</a></li>
+    <li class="item"><a href="./#faq">Питання</a></li>
     <li class="item">
       <a class="app__mob" href="tel:0800331847" data-modal="modal7" target="_blank"
         >Подзвонити
@@ -250,91 +250,96 @@
   </ul>
 </section>
 
-      <section class="container" id="#">
-  <div class="map__wrap">
-    <div class="map__map">
-      <iframe
-        class="map__map"
-        id="mapFrame"
-        src=""
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+      <section class="map__section" id="map">
+  <div class="container">
+    <div class="map__wrap">
+      <div class="map__map">
+        <iframe
+          class="map__map"
+          id="mapFrame"
+          src=""
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
 
-    <div class="map__text">
-      <div class="map__text-title">Локації <br> Дніпровщини</div>
-      <ul>
-        <li class="map__text-location" id="city">місто:</li>
-        <li class="map__text-location" id="metro">метро:</li>
-        <li class="map__text-location" id="address">адреса:</li>
-        <li class="map__text-location" id="phone">телефон:</li>
-        <li class="map__text-location" id="schedule">графік:</li>
-      </ul>
-      <button class="map__btn" onclick="switchLocation()">наступна локація</button>
+      <div class="map__text">
+        <div class="map__text-title">
+          Локації <br />
+          Дніпровщини
+        </div>
+        <ul>
+          <li class="map__text-location" id="city">місто:</li>
+          <li class="map__text-location" id="metro">метро:</li>
+          <li class="map__text-location" id="address">адреса:</li>
+          <li class="map__text-location" id="phone">телефон:</li>
+          <li class="map__text-location" id="schedule">графік:</li>
+        </ul>
+        <button class="map__btn" onclick="switchLocation()">наступна локація</button>
+      </div>
     </div>
+    <script>
+      let currentLocation = 0;
+
+      const locations = [
+        {
+          src: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7634.115416817671!2d35.026311240875586!3d48.47204125929041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe3166bee9321%3A0xf023da6fd3c609e1!2z0J7QsdC80ZbQvSDQstCw0LvRjtGCINCa0JjQoiBHcm91cA!5e0!3m2!1sru!2sua!4v1731529653921!5m2!1sru!2sua&hl=uk',
+          city: 'Днепр',
+          metro: 'Вокзальна',
+          address: 'пр. Д. Яворницького, 88',
+          phone: '0 800 331 847',
+          schedule: '9:00 - 18:00',
+        },
+        {
+          src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9312.83257617506!2d35.02099724953825!3d48.46960011600252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f751b91a69%3A0xdbe28e0ae55cb738!2sPryvatnyy%20Notarius%20Sobko%20N.v.!5e0!3m2!1sru!2sua!4v1731432195684!5m2!1sru!2sua',
+          city: 'Днепр',
+          metro: 'Вокзальна',
+          address: 'вул. Мостова, 2',
+          phone: '+380 (987) 654-321',
+          schedule: '9:00 - 18:00',
+        },
+        {
+          src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9360.097879645838!2d33.344924118902156!3d47.90404717664925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dadf35bf7aae75%3A0x25ec8613d62837c2!2z0J7QsdC80ZbQvSDQstCw0LvRjtGCINCa0JjQoiBHcm91cA!5e0!3m2!1sru!2sua!4v1731432494426!5m2!1sru!2sua',
+          city: 'Кривий ріг',
+          metro: '-',
+          address: 'пр. Центральний, 4',
+          phone: '0 800 331 059',
+          schedule: '9:00 - 18:00',
+        },
+      ];
+
+      function switchLocation() {
+        const location = locations[currentLocation];
+        document.getElementById('mapFrame').src = location.src;
+        document.getElementById('city').innerHTML = `
+    <p class="map__text-name "> місто: </p> 
+    <span class='map__text-item'>${location.city}</span>
+    `;
+        document.getElementById('metro').innerHTML = `
+    <p class="map__text-name ">метро: </p> 
+    <span class='map__text-item'>${location.metro}</span>
+    `;
+        document.getElementById('address').innerHTML = `
+    <p class="map__text-name ">адреса: </p> 
+    <span class='map__text-item'>${location.address}</span>
+    `;
+        document.getElementById('phone').innerHTML = `
+    <p class="map__text-name ">телефон: </p>
+    <span class='map__text-item'>${location.phone}</span>
+    `;
+        document.getElementById('schedule').innerHTML = `
+    <p class="map__text-name ">графік: </p> 
+    <span class='map__text-item'> Пн – Нд <br> ${location.schedule}</span>
+    `;
+
+        currentLocation = (currentLocation + 1) % locations.length;
+      }
+
+      switchLocation();
+    </script>
   </div>
-  <script>
-    let currentLocation = 0;
-
-    const locations = [
-      {
-        src: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7634.115416817671!2d35.026311240875586!3d48.47204125929041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe3166bee9321%3A0xf023da6fd3c609e1!2z0J7QsdC80ZbQvSDQstCw0LvRjtGCINCa0JjQoiBHcm91cA!5e0!3m2!1sru!2sua!4v1731529653921!5m2!1sru!2sua&hl=uk',
-        city: 'Днепр',
-        metro: 'Вокзальна',
-        address: 'пр. Д. Яворницького, 88',
-        phone: '0 800 331 847',
-        schedule: '9:00 - 18:00',
-      },
-      {
-        src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9312.83257617506!2d35.02099724953825!3d48.46960011600252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f751b91a69%3A0xdbe28e0ae55cb738!2sPryvatnyy%20Notarius%20Sobko%20N.v.!5e0!3m2!1sru!2sua!4v1731432195684!5m2!1sru!2sua',
-        city: 'Днепр',
-        metro: 'Вокзальна',
-        address: 'вул. Мостова, 2',
-        phone: '+380 (987) 654-321',
-        schedule: '9:00 - 18:00',
-      },
-      {
-        src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9360.097879645838!2d33.344924118902156!3d47.90404717664925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dadf35bf7aae75%3A0x25ec8613d62837c2!2z0J7QsdC80ZbQvSDQstCw0LvRjtGCINCa0JjQoiBHcm91cA!5e0!3m2!1sru!2sua!4v1731432494426!5m2!1sru!2sua',
-        city: 'Кривий ріг',
-        metro: '-',
-        address: 'пр. Центральний, 4',
-        phone: '0 800 331 059',
-        schedule: '9:00 - 18:00',
-      },
-    ];
-
-    function switchLocation() {
-      const location = locations[currentLocation];
-      document.getElementById('mapFrame').src = location.src;
-      document.getElementById('city').innerHTML = `
-      <p class="map__text-name "> місто: </p> 
-      <span class='map__text-item'>${location.city}</span>
-      `;
-      document.getElementById('metro').innerHTML = `
-      <p class="map__text-name ">метро: </p> 
-      <span class='map__text-item'>${location.metro}</span>
-      `;
-      document.getElementById('address').innerHTML = `
-      <p class="map__text-name ">адреса: </p> 
-      <span class='map__text-item'>${location.address}</span>
-      `;
-      document.getElementById('phone').innerHTML = `
-      <p class="map__text-name ">телефон: </p>
-      <span class='map__text-item'>${location.phone}</span>
-      `;
-      document.getElementById('schedule').innerHTML = `
-      <p class="map__text-name ">графік: </p> 
-      <span class='map__text-item'> Пн – Нд <br> ${location.schedule}</span>
-      `;
-
-      currentLocation = (currentLocation + 1) % locations.length;
-    }
-
-    switchLocation();
-  </script>
 </section>
 
       <section class="container" id="faq">
@@ -414,9 +419,9 @@
           <p>Політика конфіденційності</p>
         </a>
         <div class="footer__address">
-          <p class="footer__address-item">Дніпро просп. Д. Яворницького, 88;</p>
-          <p class="footer__address-item">Дніпро вул. Мостова, 2; (Центральний)</p>
-          <p class="footer__address-item">Кривий ріг - просп. Центральний, 4;</p>
+          <p class="footer__address-item">Дніпро - просп. Д. Яворницького, 88;</p>
+          <p class="footer__address-item">Дніпро - вул. Мостова, 2; (Центральний)</p>
+          <p class="footer__address-item">Кривий - ріг - просп. Центральний, 4;</p>
         </div>
       </li>
     </ul>
