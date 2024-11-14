@@ -96,7 +96,7 @@
 .about__list {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -104,6 +104,7 @@
 
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
+    gap: 20px;
   }
 
   &-item:first-child {
@@ -122,14 +123,14 @@
   }
 
   &-item {
-    width: 135px;
+    width: 142px;
     height: 100px;
     background: $blue-grey;
     border-radius: 20px;
-    padding: 14px 22px;
+    padding: 14px;
 
     @media screen and (min-width: $tablet) {
-      width: 160px;
+      width: 165px;
       height: 100px;
     }
 
@@ -137,7 +138,7 @@
       width: 220px;
       height: 120px;
       border-radius: 30px;
-      padding: 18px 26px;
+      padding: 16px 26px;
     }
 
     span {
