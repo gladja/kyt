@@ -28,21 +28,34 @@
 
 const button = document.getElementById('toggleButton');
 
+let touchStartX = 0;
+let touchStartY = 0;
+
 // Обработчик для десктопа
-button.addEventListener('mousedown', (e) => {
+button.addEventListener('mousedown', () => {
   button.classList.add('active');
+  switchLocation();
 });
 
-// Обработчик для мобильных устройств
+// Когда начинаем касание кнопки
 button.addEventListener('touchstart', (e) => {
-  e.preventDefault(); // Предотвращаем дефолтное поведение
-  button.classList.add('active');
-  switchLocation(); // Вызываем функцию переключения локации
-}, { passive: false });
+  // Сохраняем координаты начального касания
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
 
-// Убираем inline onclick из HTML и добавляем обработчик click для десктопа
-button.addEventListener('click', (e) => {
-  if (e.pointerType !== 'touch') { // Проверяем, что это не тач-событие
+// Когда заканчиваем касание
+button.addEventListener('touchend', (e) => {
+  // Получаем координаты окончания касания
+  const touchEndX = e.changedTouches[0].clientX;
+  const touchEndY = e.changedTouches[0].clientY;
+
+  // Проверяем, что касание началось и закончилось на кнопке
+  // (с небольшим порогом для погрешности)
+  const threshold = 10; // пикселей
+  if (Math.abs(touchEndX - touchStartX) < threshold && 
+      Math.abs(touchEndY - touchStartY) < threshold) {
+    button.classList.add('active');
     switchLocation();
   }
 });

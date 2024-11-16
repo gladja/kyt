@@ -131,10 +131,12 @@
     }
 
     /* Отключаем стандартные стили для тач-устройств */
+    // -webkit-tap-highlight-color: transparent;
+    // -webkit-touch-callout: none;
+    // -webkit-user-select: none;
+    // user-select: none;
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
+    touch-action: manipulation;
   }
 
   @media screen and (min-width: $tablet) {
