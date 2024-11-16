@@ -123,7 +123,8 @@
   }
 
   //.map__btn.active
-  &.active { 
+  &.active,
+  &.active:active { 
     background-color: $yellow-push;
 
     &:hover {
