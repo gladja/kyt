@@ -122,9 +122,10 @@
     background-color: $dark-grey;
   }
 
-  .map__btn.active {
+  //.map__btn.active
+  &.active { 
     background-color: $yellow-push;
-  
+
     &:hover {
       background-color: $dark-grey;
     }
