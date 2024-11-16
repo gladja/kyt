@@ -14,6 +14,13 @@ button.addEventListener('mousedown', () => {
 });
 
 // Для мобильных устройств
-button.addEventListener('touchstart', () => {
-  button.classList.add('active');
-});
+// button.addEventListener('touchstart', () => {
+//   button.classList.add('active');
+// });
+
+
+
+button.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Предотвращаем дефолтное поведение
+    button.classList.add('active');
+  });

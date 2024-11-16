@@ -58,7 +58,7 @@
     color: $white;
     line-height: 1.2;
     margin-bottom: 20px;
-  
+
     @media screen and (min-width: $tablet) {
       font-size: 36px;
     }
@@ -74,7 +74,7 @@
     font-size: 12px;
     display: block;
     width: 70px;
-  
+
     @media screen and (min-width: $tablet) {
       font-size: 14px;
     }
@@ -84,7 +84,7 @@
     font-weight: 500;
     font-size: 16px;
     color: $white;
-  
+
     @media screen and (min-width: $tablet) {
       font-size: 20px;
     }
@@ -117,19 +117,24 @@
   transition: all $dur-primary;
 
   &:hover,
-  &:focus
-   {
+  &:focus {
     background-color: $dark-grey;
   }
 
   //.map__btn.active
   &.active,
-  &.active:active { 
+  &.active:active {
     background-color: $yellow-push;
 
     &:hover {
       background-color: $dark-grey;
     }
+
+    /* Отключаем стандартные стили для тач-устройств */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   @media screen and (min-width: $tablet) {
