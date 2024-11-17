@@ -116,28 +116,27 @@
 
   transition: all $dur-primary;
 
-  &:hover,
-  &:focus {
-    background-color: $dark-grey;
-  }
-
   //.map__btn.active
-  &.active,
-  &.active:active {
+  //&.active:active
+  &.active {
     background-color: $yellow-push;
 
-    &:hover {
-      // background-color: $dark-grey;
+    &:active {
+      background-color: $dark-grey;
     }
-
-    /* Отключаем стандартные стили для тач-устройств */
-    // -webkit-tap-highlight-color: transparent;
-    // -webkit-touch-callout: none;
-    // -webkit-user-select: none;
-    // user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
   }
+
+  @media screen and (min-width: $tablet) {
+
+    &:hover {
+      background-color: $dark-grey;
+    }
+  }
+
+
+  // &:hover {
+  //   background-color: $dark-grey;
+  // }
 
   @media screen and (min-width: $tablet) {
     padding: 10px 10px;

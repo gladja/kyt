@@ -34,19 +34,4 @@ button.addEventListener('mousedown', () => {
 
 button.addEventListener('touchstart', () => {
   button.classList.add('active');
-});
-
-// Обработчик клика вне кнопки
-document.addEventListener('click', (e) => {
-  // Проверяем, был ли клик вне кнопки
-  if (!button.contains(e.target)) {
-    button.classList.add('active');
-  }
-});
-
-// Обработчик касания вне кнопки
-document.addEventListener('touchstart', (e) => {
-  if (!button.contains(e.target)) {
-    button.classList.add('active');
-  }
-});
+}, { passive: true });
