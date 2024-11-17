@@ -117,13 +117,13 @@
   transition: all $dur-primary;
 
   
-  &.active {
+  // &.active {
     background-color: $yellow-push;
 
     &:active {
       background-color: $dark-grey;
     }
-  }
+  // }
 
   @media screen and (min-width: $tablet) {
 
