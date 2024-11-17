@@ -28,34 +28,25 @@
 
 const button = document.getElementById('toggleButton');
 
-let touchStartX = 0;
-let touchStartY = 0;
-
-// Обработчик для десктопа
 button.addEventListener('mousedown', () => {
   button.classList.add('active');
-  switchLocation();
 });
 
-// Когда начинаем касание кнопки
-button.addEventListener('touchstart', (e) => {
-  // Сохраняем координаты начального касания
-  touchStartX = e.touches[0].clientX;
-  touchStartY = e.touches[0].clientY;
-}, { passive: true });
+button.addEventListener('touchstart', () => {
+  button.classList.add('active');
+});
 
-// Когда заканчиваем касание
-button.addEventListener('touchend', (e) => {
-  // Получаем координаты окончания касания
-  const touchEndX = e.changedTouches[0].clientX;
-  const touchEndY = e.changedTouches[0].clientY;
-
-  // Проверяем, что касание началось и закончилось на кнопке
-  // (с небольшим порогом для погрешности)
-  const threshold = 10; // пикселей
-  if (Math.abs(touchEndX - touchStartX) < threshold && 
-      Math.abs(touchEndY - touchStartY) < threshold) {
+// Обработчик клика вне кнопки
+document.addEventListener('click', (e) => {
+  // Проверяем, был ли клик вне кнопки
+  if (!button.contains(e.target)) {
     button.classList.add('active');
-    switchLocation();
+  }
+});
+
+// Обработчик касания вне кнопки
+document.addEventListener('touchstart', (e) => {
+  if (!button.contains(e.target)) {
+    button.classList.add('active');
   }
 });
