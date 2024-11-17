@@ -116,8 +116,7 @@
 
   transition: all $dur-primary;
 
-  //.map__btn.active
-  //&.active:active
+  
   &.active {
     background-color: $yellow-push;
 
@@ -133,10 +132,6 @@
     }
   }
 
-
-  // &:hover {
-  //   background-color: $dark-grey;
-  // }
 
   @media screen and (min-width: $tablet) {
     padding: 10px 10px;
