@@ -85,6 +85,15 @@
   }
 }
 
+.wrap__btn {
+  display: flex;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
 .header__btn {
   display: none;
   font-size: 18px;
@@ -104,26 +113,51 @@
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 8px 10px;
+    width: 52px;
+    height: 40px;
+    padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   @media screen and (min-width: $desktop) {
+    width: 58px;
+    height: 48px;
     font-size: 24px;
-    padding: 12px 90px;
+    padding: 12px;
   }
 }
 
 .header__btn-img {
   height: 20px;
   width: 18px;
-  margin-left: 5px;
   fill: $yellow-light;
+  margin-left: 5px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+  }
 
   @media screen and (min-width: $desktop) {
     height: 24px;
     width: 26px;
+  }
+
+  &.telegram {
+    height: 20px;
+    width: 28px;
+    margin-right: 4px;
+
+    @media screen and (min-width: $tablet) {
+      width: 28px;
+      height: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 30px;
+      height: 24px;
+    }
   }
 }
 

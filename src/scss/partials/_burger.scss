@@ -55,6 +55,7 @@ a.app__mob {
   letter-spacing: 1.9px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   background-color: $carbon-black;
   padding: 8px 20px;
@@ -65,5 +66,9 @@ a.app__mob {
   &:hover {
     color: $yellow-push;
     background-color: $dark-grey;
+  }
+
+  &.telegram {
+    margin-top: 10px;
   }
 }
