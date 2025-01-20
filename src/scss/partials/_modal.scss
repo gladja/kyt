@@ -131,13 +131,13 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  color: $yellow-push;
+  color: $carbon-black;
   text-align: center;
   font-size: 18px;
   max-width: 100%;
   padding: 14px;
   border-radius: 60px;
-  background: $carbon-black;
+  background: $yellow-push;
   border: none;
   width: 100%;
 
@@ -145,7 +145,7 @@
 
   &:hover,
   &:focus {
-    background: $dark-grey;
+    background: $yellow-light;
   }
 
   @media screen and (min-width: $tablet) {
