@@ -122,10 +122,19 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: 58px;
+    // width: 58px;
+    width: auto;
     height: 48px;
     font-size: 24px;
     padding: 12px;
+  }
+
+  &-tel {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
   }
 }
 
@@ -157,6 +166,12 @@
     @media screen and (min-width: $desktop) {
       width: 30px;
       height: 24px;
+    }
+  }
+
+  &.tel {
+    @media screen and (min-width: $desktop) {
+      display: none;
     }
   }
 }
