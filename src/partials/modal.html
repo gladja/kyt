@@ -316,3 +316,37 @@
     </div>
   </div>
 </div>
+
+<!-- modal callback-->
+<div id="modal8" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-wrap modal-support">
+      <div class="modal-header">
+        <h3 class="modal-title-support">Введіть свій номер телефону, і ми зв’яжемося з вами</h3>
+        <div>
+          <svg class="close modal__icon-close" data-modal="modal8">
+            <use href="/images/sprite.svg#close"></use>
+          </svg>
+        </div>
+      </div>
+      <form
+        action="send.php"
+        method="post"
+        id="support-form"
+        data-event="form_send"
+        data-service="pidtrumka"
+        data-type="form"
+      >
+        <div>
+          <input class="modal__form-item" type="text" name="name" required placeholder="Ваше ім’я" />
+        </div>
+        <div>
+          <input class="modal__form-item" type="tel" name="tel" required placeholder="Номер телефону" />
+        </div>
+        <div class="modal__form-btn">
+          <button type="submit" class="modal__form-submit">Зателефонуйте мені</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

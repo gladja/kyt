@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
       // Відкрити нове модальне вікно
       newModal.classList.add('show');
-      document.body.style.overflow = 'hidden'; // Заблокувати прокрутку сторінки
+      // document.body.style.overflow = 'hidden'; // Заблокувати прокрутку сторінки
       setTimeout(() => {
         newModal.style.display = 'block';
       }, 10); // Невелика затримка для запуску переходу

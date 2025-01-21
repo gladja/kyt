@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('.services-btn');
+const buttons = document.querySelectorAll('.services__btn');
 let currentIndex = 0;
 let interval;
 
