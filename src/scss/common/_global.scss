@@ -26,7 +26,7 @@
 .wrap {
   width: 100%;
   height: 100vh;
-  background-image: url('./images/hero-new-m.png');
+  background-image: url('./images/hero-new-m.jpg');
   // background-image: linear-gradient(rgba(46, 47, 66, 0), rgba(46, 47, 66, 0.7)), url('/images/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,7 @@
   justify-content: center;
   
   @media screen and (min-width: $tablet) {
-    background-image: url('./images/hero-new.png');
+    background-image: url('./images/hero-new.jpg');
   }
 
 }
