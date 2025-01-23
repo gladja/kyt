@@ -83,6 +83,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
+  z-index: 100;
 
   @media screen and (min-width: $tablet) {
     gap: 20px;
@@ -117,7 +118,7 @@
   @media screen and (min-width: $tablet) {
     padding: 10px 50px;
     font-size: 18px;
-    width: 350px;
+    // width: 350px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -128,29 +129,24 @@
 }
 
 .hero__mouse {
-  // display: none;
-
-  // @media screen and (min-width: $tablet) {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -50px;
-    // width: 50px;
-    margin-left: auto;
-    
-    animation: bounce 2s infinite ease-in-out; //animation
-    
-    img {
-      height: 115px;
-      width: 42px;
-    }
-  // }
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -50px;
+  
+  // animation: bounce 2s infinite ease-in-out; //animation
+  
+  img {
+    height: 115px;
+    width: 42px;
+  }
   
   @media screen and (min-width: $desktop) {
-    justify-content: flex-end;
+    // position: sticky;
+    z-index: 99;
+    justify-content: end;
     bottom: 52px;
-    right: -60px;
-    width: 300px;
+    right: -15px;
   }
 }
 
