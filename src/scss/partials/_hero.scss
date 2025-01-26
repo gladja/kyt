@@ -142,11 +142,13 @@
   }
   
   @media screen and (min-width: $desktop) {
-    // position: sticky;
+    position: fixed;
     z-index: 99;
     justify-content: end;
-    bottom: 52px;
-    right: -15px;
+    // bottom: 52px;
+    bottom: 21%;
+    // right: -15px;
+    right: 21%;
   }
 }
 
