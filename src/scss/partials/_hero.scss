@@ -130,29 +130,17 @@
 }
 
 .hero__mouse {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  bottom: 1%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 99;
-  
+  height: 50px;
+
   // animation: bounce 2s infinite ease-in-out; //animation
-  
-  img {
-    height: 115px;
-    width: 42px;
-  }
-  
-  @media screen and (min-width: $desktop) {
-    position: fixed;
-    justify-content: end;
-    // bottom: 52px;
-    bottom: 12%;
-    // right: -15px;
-    right: 11%;
-    transform: translate(0);
+
+  // img {
+  //   height: 115px;
+  //   width: 42px;
+  // }
+
+  @media screen and (min-width: $tablet) {
+    height: 0;
   }
 }
 
@@ -167,16 +155,29 @@
 // }
 
 .hero__mouse-btn {
+  position: fixed;
+  bottom: 2%;
+  right: 50%;
+  transform: translate(50%);
+  z-index: 99;
+
   font-size: 14px;
   color: $yellow-push;
   background-color: $carbon-black;
   border: 4px solid $yellow-push;
   border-radius: 15px;
-  padding: 12px;
+  padding: 10px 12px;
   display: flex;
   align-items: center;
-  
+
   @media screen and (min-width: $desktop) {
+    position: fixed;
+    // bottom: 52px;
+    bottom: 12%;
+    // right: -15px;
+    right: 11%;
+    transform: translate(0);
+
     padding: 15px;
     font-size: 18px;
   }
