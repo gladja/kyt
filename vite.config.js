@@ -12,6 +12,11 @@ export default defineConfig({
     outDir: '../dist',
     assetsDir: 'assets',
     emptyOutDir: true,
+    minify: 'esbuild',
+    esbuild: {
+      drop: ['console', 'debugger'], // Удаляет console.log и debugger
+      legalComments: 'none', // Убирает все комментарии
+    },
   },
   plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
   optimizeDeps: {

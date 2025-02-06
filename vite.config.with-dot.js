@@ -21,9 +21,13 @@ function addDotToPaths() {
         if (asset.type === 'asset' && asset.source) {
           if (fileName.endsWith('.css') || fileName.endsWith('.js') || fileName.endsWith('.html')) {
             let source = asset.source.toString();
-            source = source.replace(/url\((\/[^)]*)\)/g, 'url(./$1)');
-            source = source.replace(/(src|href)="\/([^"]*)"/g, '$1="./$2"');
-            console.log(`Transformed ${fileName}:`, source);
+            if (fileName.endsWith('.css')) {
+              // CSS: "/assets/img.jpg" -> "../assets/img.jpg"
+              source = source.replace(/url\(["']?\/(assets\/[^)"']+)["']?\)/g, 'url(../$1)');
+            } else if (fileName.endsWith('.js') || fileName.endsWith('.html')) {
+              // HTML и JS: "/path" -> "./path"
+              source = source.replace(/(src|href)="\/([^"]*)"/g, '$1="./$2"');
+            }
             asset.source = source;
           }
         }
@@ -39,6 +43,13 @@ export default defineConfig({
       input: glob.sync('./src/*.html'),
     },
     outDir: '../dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    minify: 'esbuild',
+    esbuild: {
+      drop: ['console', 'debugger'], // Удаляет console.log и debugger
+      legalComments: 'none', // Убирает все комментарии
+    },
   },
   plugins: [
     injectHTML(),
