@@ -71,10 +71,12 @@
 .services-wrap {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 
   @media screen and (min-width: $desktop) {
     justify-content: flex-start;
     width: 750px;
+    margin-bottom: 0;
   }
 }
 
